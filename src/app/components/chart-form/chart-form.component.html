@@ -1,0 +1,66 @@
+<form class="basic-form" [formGroup]="formGroup">
+  <div class="form-field">
+    <label> Ideation </label>
+    <div class="form-control">
+      <input formControlName="ideation" type="range" min="0" max="5">
+      <span> {{ formGroup.controls['ideation'].value }} </span>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label> Art Direction </label>
+    <div class="form-control">
+      <input formControlName="artDirection" type="range" min="0" max="5">
+      <span> {{ formGroup.controls['artDirection'].value }} </span>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label> Design </label>
+    <div class="form-control">
+      <input formControlName="design" type="range" min="0" max="5">
+      <span> {{ formGroup.controls['design'].value }} </span>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label> Technical Conception </label>
+    <div class="form-control">
+      <input formControlName="technicalConception" type="range" min="0" max="5">
+      <span> {{ formGroup.controls['technicalConception'].value }} </span>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label> Strategy </label>
+    <div class="form-control">
+      <input formControlName="strategy" type="range" min="0" max="5">
+      <span> {{ formGroup.controls['strategy'].value }} </span>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label> Planning </label>
+    <div class="form-control">
+      <input formControlName="planning" type="range" min="0" max="5">
+      <span> {{ formGroup.controls['planning'].value }} </span>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label> Editorial </label>
+    <div class="form-control">
+      <input formControlName="editorial" type="range" min="0" max="5">
+      <span> {{ formGroup.controls['editorial'].value }} </span>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label> Copywriting </label>
+    <div class="form-control">
+      <input formControlName="copywriting" type="range" min="0" max="5">
+      <span> {{ formGroup.controls['copywriting'].value }} </span>
+    </div>
+  </div>
+
+</form>

@@ -4,20 +4,28 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
-import {MatIconModule, MatToolbarModule} from "@angular/material";
+import {MatFormFieldModule, MatIconModule, MatInputModule, MatToolbarModule} from "@angular/material";
 import { NavbarComponent } from './components/navbar/navbar.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { ChartFormComponent } from './components/chart-form/chart-form.component';
+import { MainContainerComponent } from './components/main-container/main-container.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    ChartFormComponent,
+    MainContainerComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,25 @@
+$range-label-color: rgba(0,0,0,.54);
+
+.form-field {
+  color: $range-label-color;
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  label {
+    width: 150px;
+  }
+
+  label, .form-control {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .form-control {
+    input, span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
