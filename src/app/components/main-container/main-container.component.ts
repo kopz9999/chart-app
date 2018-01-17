@@ -9,15 +9,36 @@ import {ChartFormComponent} from "../chart-form/chart-form.component";
 export class MainContainerComponent implements OnInit {
   @ViewChild('currentForm') currentForm: ChartFormComponent;
   @ViewChild('desiredForm') desiredForm: ChartFormComponent;
+  chartOptions = {
+    responsive: true
+  };
+
+  chartData = [
+  ];
+
+  chartLabels = [
+    'Ideation',
+    'Art Direction',
+    'Design',
+    'Technical Conception',
+    'Strategy',
+    'Planning',
+    'Editorial',
+    'Copywriting',
+  ];
 
   constructor() { }
 
   ngOnInit() {
     this.currentForm.formGroup.valueChanges.subscribe(() => this.updateChart());
     this.desiredForm.formGroup.valueChanges.subscribe(() => this.updateChart());
+    this.updateChart();
   }
 
   updateChart() {
-    console.log(this.currentForm.formGroup.value, this.desiredForm.formGroup.value);
+    this.chartData = [
+      { data: Object.values(this.currentForm.formGroup.value), label: 'Current' },
+      { data: Object.values(this.desiredForm.formGroup.value), label: 'Desired' },
+    ];
   }
 }

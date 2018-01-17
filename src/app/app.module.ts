@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { ChartFormComponent } from './components/chart-form/chart-form.component';
 import { MainContainerComponent } from './components/main-container/main-container.component';
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { MainContainerComponent } from './components/main-container/main-contain
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
+    ChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
