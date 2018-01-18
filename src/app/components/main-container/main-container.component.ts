@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {ChartFormComponent} from "../chart-form/chart-form.component";
 
 @Component({
@@ -9,6 +9,9 @@ import {ChartFormComponent} from "../chart-form/chart-form.component";
 export class MainContainerComponent implements OnInit {
   @ViewChild('currentForm') currentForm: ChartFormComponent;
   @ViewChild('desiredForm') desiredForm: ChartFormComponent;
+  @ViewChild('chart') chart: ElementRef;
+  @ViewChild('pic') pic: ElementRef;
+
   chartOptions = {
     legend: {
       position: 'right'
@@ -67,6 +70,12 @@ export class MainContainerComponent implements OnInit {
     this.currentForm.formGroup.valueChanges.subscribe(() => this.updateChart());
     this.desiredForm.formGroup.valueChanges.subscribe(() => this.updateChart());
     this.updateChart();
+  }
+
+  openImage() {
+    this.pic.nativeElement.src = this.chart.nativeElement.toDataURL();
+    const w = window.open("");
+    w.document.write(this.pic.nativeElement.outerHTML);
   }
 
   updateChart() {

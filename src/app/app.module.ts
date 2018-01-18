@@ -4,7 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
-import {MatFormFieldModule, MatIconModule, MatInputModule, MatToolbarModule} from "@angular/material";
+import {MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule, MatToolbarModule} from "@angular/material";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { ChartFormComponent } from './components/chart-form/chart-form.component';
@@ -27,6 +27,7 @@ import { ChartsModule } from 'ng2-charts';
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
+    MatButtonModule,
     ChartsModule,
   ],
   providers: [],

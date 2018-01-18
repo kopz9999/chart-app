@@ -9,10 +9,15 @@
       <h4> Desired </h4>
       <app-chart-form #desiredForm></app-chart-form>
     </div>
+
+    <div class="actions">
+      <button mat-raised-button (click)="openImage()">Export Image</button>
+    </div>
   </div>
 
   <div class="chart-container">
     <canvas
+      #chart
       baseChart
       [chartType]="'radar'"
       [datasets]="chartData"
@@ -22,4 +27,6 @@
       [legend]="true">
     </canvas>
   </div>
+
+  <img #pic class="hidden" />
 </div>
