@@ -10,6 +10,9 @@ export class MainContainerComponent implements OnInit {
   @ViewChild('currentForm') currentForm: ChartFormComponent;
   @ViewChild('desiredForm') desiredForm: ChartFormComponent;
   chartOptions = {
+    legend: {
+      position: 'right'
+    },
     responsive: true,
     scale: {
       angleLines: {
@@ -43,6 +46,21 @@ export class MainContainerComponent implements OnInit {
     'Copywriting',
   ];
 
+  colors = [
+    {
+      borderColor: '#5bb7ef',
+      backgroundColor: 'rgba(0,0,0,0)',
+      pointBorderColor: 'rgba(0,0,0,0)',
+      pointBackgroundColor: 'rgba(0,0,0,0)',
+    },
+    {
+      borderColor: 'rgba(0,0,0,0)',
+      backgroundColor: '#ffd451',
+      pointBorderColor: 'rgba(0,0,0,0)',
+      pointBackgroundColor: 'rgba(0,0,0,0)',
+    },
+  ];
+
   constructor() { }
 
   ngOnInit() {
@@ -53,8 +71,8 @@ export class MainContainerComponent implements OnInit {
 
   updateChart() {
     this.chartData = [
-      { data: Object.values(this.currentForm.formGroup.value), label: 'Current' },
       { data: Object.values(this.desiredForm.formGroup.value), label: 'Desired' },
+      { data: Object.values(this.currentForm.formGroup.value), label: 'Current' },
     ];
   }
 }
